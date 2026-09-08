@@ -601,6 +601,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "t:names.product_list",
       "settings": {
         "collection": "all",
@@ -748,6 +749,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "t:names.media_with_text",
       "settings": {
         "media_position": "left",
@@ -902,6 +904,7 @@
       "block_order": [
         "group_mfTd9p"
       ],
+      "disabled": true,
       "name": "t:names.collection_list",
       "settings": {
         "collection_list": [],
