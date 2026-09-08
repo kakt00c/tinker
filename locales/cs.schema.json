@@ -9,6 +9,8 @@
  */
 {
   "names": {
+    "usp_bar": "Lišta výhod",
+    "usp_item": "Výhoda",
     "404": "404",
     "colors": "Paleta barev",
     "custom_section": "Vlastní sekce",
@@ -1047,6 +1049,10 @@
     "featured_collection_h3": "<h3>Doporučená kolekce</h3>"
   },
   "text_defaults": {
+    "usp_fast_dispatch": "Rychlé odeslání do 48 hodin u objednávek do 14:00",
+    "usp_free_returns": "Vrácení zboží zdarma až do 100 dnů od převzetí",
+    "usp_wide_variety": "Široký výběr vzorů, každý si vybere",
+    "usp_free_shipping": "Doprava zdarma při nákupu nad 999 Kč",
     "button_label": "Nakupujte nyní",
     "collapsible_row": "Rozbalovací řádek",
     "heading": "Nadpis",

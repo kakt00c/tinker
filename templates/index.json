@@ -708,10 +708,62 @@
         "padding-block-start": 48,
         "padding-block-end": 64
       }
+    },
+    "usp_bar_dedoles": {
+      "type": "usps-claude",
+      "blocks": {
+        "usp-1": {
+          "type": "_usp-item",
+          "settings": {
+            "icon": "stopwatch",
+            "text": "Fast dispatch within 48 hours for orders placed before 2:00 PM"
+          }
+        },
+        "usp-2": {
+          "type": "_usp-item",
+          "settings": {
+            "icon": "return",
+            "text": "Free returns for up to 100 days from receipt of goods"
+          }
+        },
+        "usp-3": {
+          "type": "_usp-item",
+          "settings": {
+            "icon": "heart",
+            "text": "A wide variety of patterns to choose from, something for everyone"
+          }
+        },
+        "usp-4": {
+          "type": "_usp-item",
+          "settings": {
+            "icon": "truck",
+            "text": "Free shipping on orders over 999 CZK"
+          }
+        }
+      },
+      "block_order": [
+        "usp-1",
+        "usp-2",
+        "usp-3",
+        "usp-4"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "desktop_alignment": "center",
+        "gap": 32,
+        "show_dividers": false,
+        "icon_size": 24,
+        "icon_gap": 10,
+        "text_size": "sm",
+        "text_weight": "400",
+        "padding-block-start": 20,
+        "padding-block-end": 20
+      }
     }
   },
   "order": [
     "hero_iLBwPd",
+    "usp_bar_dedoles",
     "product_list_EDUBdR",
     "media_with_content_LfPdEJ",
     "collection_list_xpBxCm"

@@ -252,6 +252,8 @@
     "media_type_info": "Features are populated from your menu links"
   },
   "names": {
+    "usp_bar": "USP bar",
+    "usp_item": "USP",
     "column": "Column",
     "product_title": "Product title",
     "custom_liquid": "Custom Liquid",
@@ -1187,6 +1189,10 @@
     "bottom_row_text": "Bottom row text"
   },
   "text_defaults": {
+    "usp_fast_dispatch": "Fast dispatch within 48 hours for orders placed before 2:00 PM",
+    "usp_free_returns": "Free returns for up to 100 days from receipt of goods",
+    "usp_wide_variety": "A wide variety of patterns to choose from, something for everyone",
+    "usp_free_shipping": "Free shipping on orders over 999 CZK",
     "accordion_heading": "Accordion heading",
     "are_purchases_final_sale": "Are any purchases final sale?",
     "be_bold": "Be bold.",
