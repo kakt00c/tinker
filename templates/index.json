@@ -223,30 +223,38 @@
         "usp-1": {
           "type": "_usp-item",
           "settings": {
+            "text": "Fast dispatch within 48 hours for orders placed before 2:00 PM",
             "icon": "stopwatch",
-            "text": "Fast dispatch within 48 hours for orders placed before 2:00 PM"
-          }
+            "icon_color": ""
+          },
+          "blocks": {}
         },
         "usp-2": {
           "type": "_usp-item",
           "settings": {
+            "text": "Free returns for up to 100 days from receipt of goods",
             "icon": "return",
-            "text": "Free returns for up to 100 days from receipt of goods"
-          }
+            "icon_color": ""
+          },
+          "blocks": {}
         },
         "usp-3": {
           "type": "_usp-item",
           "settings": {
+            "text": "A wide variety of patterns to choose from, something for everyone",
             "icon": "heart",
-            "text": "A wide variety of patterns to choose from, something for everyone"
-          }
+            "icon_color": ""
+          },
+          "blocks": {}
         },
         "usp-4": {
           "type": "_usp-item",
           "settings": {
+            "text": "Free shipping on orders over 999 CZK",
             "icon": "truck",
-            "text": "Free shipping on orders over 999 CZK"
-          }
+            "icon_color": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -255,6 +263,7 @@
         "usp-3",
         "usp-4"
       ],
+      "name": "USP bar by claude",
       "settings": {
         "section_width": "page-width",
         "desktop_alignment": "center",
@@ -264,6 +273,7 @@
         "icon_gap": 10,
         "text_size": "sm",
         "text_weight": "400",
+        "background_color": "",
         "padding-block-start": 20,
         "padding-block-end": 20
       }
@@ -282,7 +292,7 @@
             "text_size": 14,
             "background_color": "#ffffff",
             "text_color": "#000000",
-            "border_color": "#F1EDE8",
+            "border_color": "#f1ede8",
             "border_width": 1
           },
           "blocks": {}
@@ -291,6 +301,7 @@
       "block_order": [
         "ai_gen_block_ee4f4b4_YEgEnH"
       ],
+      "name": "USP bar by shopify ai",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -323,32 +334,36 @@
     "usps-gemini": {
       "type": "usps-gemini",
       "blocks": {
-         "usp-1": {
+        "usp-1": {
           "type": "usp",
           "settings": {
             "heading": "Fast dispatch",
-            "text": "Within <48 hours for orders placed before 2:00 PM"
+            "text": "Within <48 hours for orders placed before 2:00 PM",
+            "icon_svg": ""
           }
         },
         "usp-2": {
           "type": "usp",
           "settings": {
             "heading": "Free returns",
-            "text": "For up to 100 days from receipt of goods"
+            "text": "For up to 100 days from receipt of goods",
+            "icon_svg": ""
           }
         },
         "usp-3": {
           "type": "usp",
           "settings": {
             "heading": "Wide variety",
-            "text": "A wide variety of patterns to choose from, something for everyone"
+            "text": "A wide variety of patterns to choose from, something for everyone",
+            "icon_svg": ""
           }
         },
-         "usp-4": {
+        "usp-4": {
           "type": "usp",
           "settings": {
             "heading": "Free shipping",
-            "text": "On orders over 999 CZK"
+            "text": "On orders over 999 CZK",
+            "icon_svg": ""
           }
         }
       },
@@ -358,7 +373,16 @@
         "usp-3",
         "usp-4"
       ],
-      "settings": {}
+      "name": "USP bar by gemini",
+      "settings": {
+        "background_color": "",
+        "section_width": "page-width",
+        "alignment": "center",
+        "gap": 24,
+        "icon_size": 32,
+        "padding-block-start": 36,
+        "padding-block-end": 36
+      }
     },
     "product_list_EDUBdR": {
       "type": "product-list",
