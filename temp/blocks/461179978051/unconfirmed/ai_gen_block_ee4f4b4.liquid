@@ -1,6 +1,178 @@
+{% doc %}
+  @prompt
+    add section with store USP blocks like: Fast dispatch within <48 hours for orders placed before 2:00 PM, Free returns for up to 100 days, A wide variety of patterns to choose from, Free shipping on orders over 50eur
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-usp-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+    background: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+    border-top: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+    border-bottom: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+  }
+
+  .ai-usp__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .ai-usp__item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 96px;
+    padding: 22px 24px;
+    text-align: center;
+    border-right: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-usp__item-{{ ai_gen_id }}:last-child {
+    border-right: 0;
+  }
+
+  .ai-usp__text-{{ ai_gen_id }} {
+    margin: 0;
+    font-family: inherit;
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-usp__grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ai-usp__item-{{ ai_gen_id }} {
+      min-height: 84px;
+      padding: 18px 14px;
+      border-bottom: 1px solid {{ block.settings.border_color }};
+    }
+
+    .ai-usp__item-{{ ai_gen_id }}:nth-child(2n) {
+      border-right: 0;
+    }
+
+    .ai-usp__item-{{ ai_gen_id }}:nth-child(3),
+    .ai-usp__item-{{ ai_gen_id }}:nth-child(4) {
+      border-bottom: 0;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-usp-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-usp__grid-{{ ai_gen_id }}" role="list">
+    {% for i in (1..4) %}
+      {% liquid
+        assign text_key = 'usp_' | append: i
+        assign usp_text = block.settings[text_key]
+      %}
+      {% if usp_text != blank %}
+        <div class="ai-usp__item-{{ ai_gen_id }}" role="listitem">
+          <p class="ai-usp__text-{{ ai_gen_id }}">{{ usp_text }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Store USPs",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Benefits"
+    },
+    {
+      "type": "text",
+      "id": "usp_1",
+      "label": "Benefit 1",
+      "default": "Fast dispatch within 48 hours for orders placed before 2:00 PM"
+    },
+    {
+      "type": "text",
+      "id": "usp_2",
+      "label": "Benefit 2",
+      "default": "Free returns for up to 100 days"
+    },
+    {
+      "type": "text",
+      "id": "usp_3",
+      "label": "Benefit 3",
+      "default": "A wide variety of patterns to choose from"
+    },
+    {
+      "type": "text",
+      "id": "usp_4",
+      "label": "Benefit 4",
+      "default": "Free shipping on orders over 50 EUR"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Borders",
+      "default": "#F1EDE8"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "Border width",
+      "min": 0,
+      "max": 2,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "Store USPs"
+    }
+  ],
+  "tag": null,
+  "class": "store-usps-block"
+}
 {% endschema %}
